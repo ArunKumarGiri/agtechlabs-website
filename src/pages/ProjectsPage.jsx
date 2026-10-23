@@ -15,6 +15,7 @@ import {
 import { PROJECTS } from '../data/portfolioData';
 import ProjectModal from '../components/ProjectModal';
 import { soundFx } from '../utils/audioEffects';
+import { getAssetUrl } from '../utils/assetUrl';
 
 export default function ProjectsPage({ onSelectService }) {
   const [activeFilter, setActiveFilter] = useState('all');
@@ -102,7 +103,7 @@ export default function ProjectsPage({ onSelectService }) {
               {/* Project Mockup Header Card */}
               <div className="relative aspect-[16/9] w-full overflow-hidden bg-slate-950 border-b border-white/10">
                 <img
-                  src={project.image}
+                  src={getAssetUrl(project.image)}
                   alt={project.title}
                   className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700 opacity-80"
                 />

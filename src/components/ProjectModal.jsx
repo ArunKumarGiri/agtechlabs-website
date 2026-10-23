@@ -11,6 +11,7 @@ import {
   Globe
 } from 'lucide-react';
 import { PERSONAL_INFO } from '../data/portfolioData';
+import { getAssetUrl } from '../utils/assetUrl';
 
 export default function ProjectModal({ project, onClose, onRequestSimilar }) {
   if (!project) return null;
@@ -50,7 +51,7 @@ export default function ProjectModal({ project, onClose, onRequestSimilar }) {
         {/* Mockup Preview Visual */}
         <div className="relative rounded-2xl overflow-hidden border border-white/10 mb-6 bg-slate-950 aspect-video max-h-72 w-full">
           <img
-            src={project.image}
+            src={getAssetUrl(project.image)}
             alt={project.title}
             className="w-full h-full object-cover object-center opacity-85"
           />

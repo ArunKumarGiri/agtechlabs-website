@@ -1,4 +1,5 @@
 import React from 'react';
+import { getAssetUrl } from '../utils/assetUrl';
 
 export default function BrandLogo({ size = 'md', showSubtitle = true, className = '' }) {
   const sizeClasses = {
@@ -25,7 +26,7 @@ export default function BrandLogo({ size = 'md', showSubtitle = true, className 
 
         {/* High-Res Holographic Crystal Emblem */}
         <img
-          src="/assets/ag-techlabs-logo.jpg"
+          src={getAssetUrl('/assets/ag-techlabs-logo.jpg')}
           alt="AG TechLabs Emblem"
           className="w-full h-full object-cover object-center rounded-[14px] group-hover:scale-105 transition-transform duration-300 contrast-110"
         />

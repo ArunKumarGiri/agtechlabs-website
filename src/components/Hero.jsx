@@ -13,6 +13,7 @@ import {
   Bot
 } from 'lucide-react';
 import { PERSONAL_INFO } from '../data/portfolioData';
+import { getAssetUrl } from '../utils/assetUrl';
 
 export default function Hero({ onOpenEstimator }) {
   return (
@@ -114,7 +115,7 @@ export default function Hero({ onOpenEstimator }) {
                 
                 {/* 3D Visual Asset */}
                 <img
-                  src="/assets/hero-tech-visual.jpg"
+                  src={getAssetUrl('/assets/hero-tech-visual.jpg')}
                   alt="3D Holographic AI and Software Technology Concept"
                   className="w-full h-full object-cover object-center transform group-hover:scale-105 transition-transform duration-700 opacity-90"
                 />

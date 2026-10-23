@@ -26,8 +26,17 @@ export default function App() {
     setPrefilledService(serviceName);
   };
 
+  const getBasename = () => {
+    const base = import.meta.env.BASE_URL || '/';
+    const cleanBase = base.replace(/\/$/, '');
+    if (!cleanBase) return undefined;
+    return typeof window !== 'undefined' && window.location.pathname.startsWith(cleanBase)
+      ? cleanBase
+      : undefined;
+  };
+
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={getBasename()}>
       <ScrollToTop />
       
       <div className="relative min-h-screen bg-[#030508] text-slate-100 flex flex-col selection:bg-purple-500/30 selection:text-purple-200">

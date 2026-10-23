@@ -1,18 +1,18 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { 
-  Sparkles, 
-  Code2, 
-  Heart, 
-  Lightbulb, 
-  ShieldCheck, 
-  Cpu, 
-  Phone, 
-  MessageSquare, 
-  CheckCircle2, 
-  Compass, 
-  Palette, 
-  Rocket, 
+import {
+  Sparkles,
+  Code2,
+  Heart,
+  Lightbulb,
+  ShieldCheck,
+  Cpu,
+  Phone,
+  MessageSquare,
+  CheckCircle2,
+  Compass,
+  Palette,
+  Rocket,
   Layers,
   ArrowRight
 } from 'lucide-react';
@@ -47,13 +47,13 @@ export default function AboutPage() {
 
   return (
     <div className="pt-28 pb-24 bg-[#030508] min-h-screen text-slate-100">
-      
+
       {/* Background ambient lighting */}
       <div className="absolute top-24 left-1/4 w-[600px] h-[350px] bg-purple-900/15 rounded-full blur-[150px] pointer-events-none" />
       <div className="absolute top-1/2 right-10 w-[450px] h-[400px] bg-cyan-900/15 rounded-full blur-[140px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-left">
-        
+
         {/* Page Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-purple-950/40 border border-purple-500/30 text-purple-300 text-xs font-mono font-semibold uppercase tracking-wider mb-4">
@@ -72,55 +72,142 @@ export default function AboutPage() {
 
         {/* Founder Bio Two-Column Layout */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-14 items-center mb-24">
-          
-          {/* Left Column: Portrait & Direct Contact */}
-          <div className="lg:col-span-5 relative flex flex-col items-center">
-            <div className="relative w-full max-w-sm aspect-square rounded-3xl p-1 bg-gradient-to-br from-purple-500/40 via-indigo-500/20 to-cyan-500/40 shadow-[0_0_40px_rgba(168,85,247,0.25)]">
-              <div className="w-full h-full rounded-[22px] overflow-hidden relative bg-slate-950">
-                <img
-                  src="/assets/arun-goswami.jpg"
-                  alt="Arun Goswami - Founder & Lead Engineer at AG TechLabs"
-                  className="w-full h-full object-cover object-top filter contrast-105"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#030508] via-transparent to-transparent opacity-70" />
 
-                <div className="absolute bottom-4 left-4 right-4 p-3 rounded-xl bg-slate-950/85 backdrop-blur-md border border-white/10 flex items-center justify-between">
-                  <div className="flex items-center gap-2.5">
-                    <span className="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse" />
-                    <span className="text-xs font-bold text-white font-mono">Arun Goswami</span>
+          {/* Left Column: Executive Identity Card (No photo) */}
+          <div className="lg:col-span-5 relative flex flex-col items-center w-full">
+            <div className="relative w-full max-w-md rounded-3xl p-[1.5px] bg-gradient-to-br from-purple-500/50 via-indigo-500/30 to-cyan-500/50 shadow-[0_0_50px_rgba(168,85,247,0.25)] group hover:shadow-[0_0_60px_rgba(168,85,247,0.35)] transition-all duration-500">
+              <div className="w-full rounded-[22px] bg-[#070b14]/95 backdrop-blur-2xl p-6 sm:p-7 border border-white/10 relative overflow-hidden text-left">
+
+                {/* Ambient background glow accents */}
+                <div className="absolute top-0 right-0 w-44 h-44 bg-purple-600/15 rounded-full blur-3xl pointer-events-none" />
+                <div className="absolute bottom-0 left-0 w-44 h-44 bg-cyan-600/15 rounded-full blur-3xl pointer-events-none" />
+
+                {/* Top Bar: Monogram Badge & Active Status */}
+                <div className="flex items-center justify-between pb-5 border-b border-white/10 relative z-10">
+                  <div className="flex items-center gap-3">
+                    <div className="w-12 h-12 rounded-2xl bg-gradient-to-tr from-purple-600 via-indigo-600 to-cyan-400 p-0.5 shadow-[0_0_20px_rgba(168,85,247,0.4)] flex items-center justify-center shrink-0">
+                      <div className="w-full h-full rounded-[14px] bg-[#080d1a] flex items-center justify-center">
+                        <span className="font-mono font-black text-sm tracking-wider text-transparent bg-clip-text bg-gradient-to-r from-purple-300 to-cyan-300">
+                          AG
+                        </span>
+                      </div>
+                    </div>
+                    <div>
+                      <div className="text-[10px] font-mono tracking-widest uppercase text-purple-400 font-semibold">
+                        ENGINEERING LEAD
+                      </div>
+                      <div className="text-xs font-mono text-slate-400">
+                        {COMPANY_INFO.brandName}
+                      </div>
+                    </div>
                   </div>
-                  <span className="text-[10px] font-mono text-purple-300 bg-purple-950/80 px-2 py-0.5 rounded border border-purple-500/30">
-                    Founder & Lead Architect
-                  </span>
+
+                  {/* Live Status Pill */}
+                  <div className="flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-950/60 border border-emerald-500/30 shadow-[0_0_12px_rgba(16,185,129,0.2)]">
+                    <span className="relative flex h-2 w-2">
+                      <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75" />
+                      <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-400" />
+                    </span>
+                    <span className="text-[10px] font-mono font-semibold text-emerald-300 uppercase tracking-wider">
+                      Available
+                    </span>
+                  </div>
                 </div>
+
+                {/* Main Identity Info */}
+                <div className="py-6 relative z-10">
+                  <div className="text-xs font-mono text-cyan-400 tracking-wider uppercase mb-1">
+                    {COMPANY_INFO.role}
+                  </div>
+                  <h3 className="text-3xl font-extrabold text-white tracking-tight font-display mb-2">
+                    {COMPANY_INFO.founder}
+                  </h3>
+                  <p className="text-xs sm:text-sm text-slate-400 leading-relaxed">
+                    Direct engineering access with zero agency overhead. Specializing in high-performance web systems, cross-platform mobile apps & custom AI training.
+                  </p>
+                </div>
+
+                {/* Contact Telemetry Cards */}
+                <div className="space-y-2.5 relative z-10">
+                  {/* Phone Card */}
+                  <a
+                    href={COMPANY_INFO.phoneTel}
+                    className="group/item flex items-center justify-between p-3.5 rounded-xl bg-slate-900/80 border border-purple-500/20 hover:border-purple-500/60 hover:bg-purple-950/20 transition-all duration-300"
+                  >
+                    <div className="flex items-center gap-3">
+                      <div className="p-2 rounded-lg bg-purple-600/20 border border-purple-500/30 text-purple-400 group-hover/item:text-purple-300">
+                        <Phone className="w-4 h-4" />
+                      </div>
+                      <div>
+                        <div className="text-[10px] font-mono text-slate-400 uppercase tracking-wider">Direct Phone</div>
+                        <div className="text-sm font-mono font-bold text-white group-hover/item:text-purple-300 transition-colors">
+                          {COMPANY_INFO.phoneFormatted}
+                        </div>
+                      </div>
+                    </div>
+                    <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-purple-500/10 text-purple-300 border border-purple-500/30">
+                      Tap to Call
+                    </span>
+                  </a>
+
+                  {/* WhatsApp Card */}
+                  <a
+                    href={COMPANY_INFO.whatsappUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group/item flex items-center justify-between p-3.5 rounded-xl bg-slate-900/80 border border-emerald-500/20 hover:border-emerald-500/60 hover:bg-emerald-950/20 transition-all duration-300"
+                  >
+                    <div className="flex items-center gap-3">
+                      <div className="p-2 rounded-lg bg-emerald-600/20 border border-emerald-500/30 text-emerald-400 group-hover/item:text-emerald-300">
+                        <MessageSquare className="w-4 h-4" />
+                      </div>
+                      <div>
+                        <div className="text-[10px] font-mono text-slate-400 uppercase tracking-wider">WhatsApp Direct</div>
+                        <div className="text-sm font-mono font-bold text-white group-hover/item:text-emerald-300 transition-colors">
+                          {COMPANY_INFO.phone}
+                        </div>
+                      </div>
+                    </div>
+                    <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-300 border border-emerald-500/30">
+                      Instant Chat
+                    </span>
+                  </a>
+
+                  {/* Credentials / Telemetry */}
+                  <div className="grid grid-cols-2 gap-2 pt-2">
+                    <div className="p-2.5 rounded-xl bg-slate-950/60 border border-white/5 flex flex-col">
+                      <span className="text-[10px] font-mono text-slate-500 uppercase">Experience</span>
+                      <span className="text-xs font-mono font-bold text-cyan-300">6+ Years Prod</span>
+                    </div>
+                    <div className="p-2.5 rounded-xl bg-slate-950/60 border border-white/5 flex flex-col">
+                      <span className="text-[10px] font-mono text-slate-500 uppercase">Location</span>
+                      <span className="text-xs font-mono font-bold text-purple-300">New Delhi / Remote</span>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Direct Action Buttons */}
+                <div className="mt-6 pt-5 border-t border-white/10 grid grid-cols-2 gap-3 relative z-10">
+                  <a
+                    href={COMPANY_INFO.phoneTel}
+                    className="flex items-center justify-center gap-2 py-3 px-4 rounded-xl bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-500 hover:to-indigo-500 text-white font-mono text-xs font-bold transition-all shadow-[0_0_20px_rgba(168,85,247,0.3)] cursor-pointer"
+                  >
+                    <Phone className="w-3.5 h-3.5" />
+                    <span>Call Arun</span>
+                  </a>
+
+                  <a
+                    href={COMPANY_INFO.whatsappUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center justify-center gap-2 py-3 px-4 rounded-xl bg-emerald-600/20 hover:bg-emerald-600/30 border border-emerald-500/40 text-emerald-300 hover:text-white font-mono text-xs font-bold transition-all shadow-md cursor-pointer"
+                  >
+                    <MessageSquare className="w-3.5 h-3.5 text-emerald-400" />
+                    <span>WhatsApp</span>
+                  </a>
+                </div>
+
               </div>
-
-              {/* Floating mini badge */}
-              <div className="absolute -bottom-4 -right-2 sm:-right-4 p-3 rounded-2xl glass-panel border border-cyan-500/40 shadow-xl">
-                <div className="text-[10px] font-mono text-slate-400">Direct Phone</div>
-                <div className="text-xs font-bold text-cyan-300 font-mono">7011880423</div>
-              </div>
-            </div>
-
-            {/* Direct Contact Buttons */}
-            <div className="mt-8 flex flex-wrap items-center justify-center gap-3 w-full max-w-sm">
-              <a
-                href={COMPANY_INFO.phoneTel}
-                className="flex items-center gap-2 px-4 py-2 rounded-xl bg-slate-900 border border-slate-700/80 hover:border-purple-500 text-xs text-slate-200 transition-all font-mono"
-              >
-                <Phone className="w-3.5 h-3.5 text-purple-400" />
-                <span>Call: 7011880423</span>
-              </a>
-
-              <a
-                href={COMPANY_INFO.whatsappUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-2 px-4 py-2 rounded-xl bg-emerald-950/40 border border-emerald-500/40 text-xs text-emerald-300 hover:bg-emerald-950/60 transition-all font-mono"
-              >
-                <MessageSquare className="w-3.5 h-3.5 text-emerald-400" />
-                <span>WhatsApp</span>
-              </a>
             </div>
           </div>
 
@@ -236,11 +323,10 @@ export default function AboutPage() {
                   soundFx.playClick();
                   setActiveTechCat(idx);
                 }}
-                className={`px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all cursor-pointer ${
-                  activeTechCat === idx
+                className={`px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all cursor-pointer ${activeTechCat === idx
                     ? 'bg-gradient-to-r from-purple-600 to-cyan-600 text-white shadow-md'
                     : 'bg-slate-900 text-slate-400 hover:text-white border border-white/5'
-                }`}
+                  }`}
               >
                 {cat.category}
               </button>

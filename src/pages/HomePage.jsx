@@ -22,6 +22,7 @@ import { COMPANY_INFO, SERVICES, PROJECTS } from '../data/portfolioData';
 import InteractiveTerminal from '../components/InteractiveTerminal';
 import ProjectModal from '../components/ProjectModal';
 import { soundFx } from '../utils/audioEffects';
+import { getAssetUrl } from '../utils/assetUrl';
 
 export default function HomePage({ onOpenEstimator }) {
   const [selectedProject, setSelectedProject] = useState(null);
@@ -125,7 +126,7 @@ export default function HomePage({ onOpenEstimator }) {
               <div className="relative w-full max-w-md aspect-square rounded-3xl p-1 bg-gradient-to-b from-purple-500/30 via-indigo-500/20 to-cyan-500/30 shadow-[0_0_50px_rgba(168,85,247,0.25)] group">
                 <div className="w-full h-full rounded-[22px] overflow-hidden relative bg-[#070b14]/90 backdrop-blur-xl border border-white/10 flex items-center justify-center">
                   <img
-                    src="/assets/hero-tech-visual.jpg"
+                    src={getAssetUrl('/assets/hero-tech-visual.jpg')}
                     alt="AG TechLabs 3D Holographic AI and Software Architecture"
                     className="w-full h-full object-cover object-center transform group-hover:scale-105 transition-transform duration-700 opacity-90"
                   />
@@ -331,7 +332,7 @@ export default function HomePage({ onOpenEstimator }) {
               >
                 <div className="relative aspect-video w-full overflow-hidden bg-slate-950">
                   <img
-                    src={project.image}
+                    src={getAssetUrl(project.image)}
                     alt={project.title}
                     className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700 opacity-80"
                   />

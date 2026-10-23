@@ -1,3 +1,5 @@
+import { getAssetUrl } from '../utils/assetUrl';
+
 export const COMPANY_INFO = {
   brandName: "AG TechLabs",
   brandLegal: "AG TechLabs by Arun Goswami",
@@ -285,7 +287,7 @@ export const PROJECTS = [
     filterKey: "ai",
     shortDesc: "A complete AI workbench for fine-tuning open-source LLMs, running LoRA experiments, and deploying quantized inference endpoints.",
     fullDesc: "NeuroCraft AI Studio enables engineering teams to upload domain datasets, configure hyperparameters (LoRA rank, alpha, learning rate), monitor loss curves in real-time, and export quantized GGUF/AWQ models with one click.",
-    image: "/assets/hero-tech-visual.jpg",
+    image: getAssetUrl("/assets/neurocraft-ai.jpg"),
     tags: ["PyTorch", "Hugging Face", "FastAPI", "React", "Tailwind CSS", "CUDA"],
     stats: { speed: "4x Faster Training", metrics: "99.2% Accuracy", type: "AI Infrastructure" },
     features: [
@@ -305,7 +307,7 @@ export const PROJECTS = [
     filterKey: "software",
     shortDesc: "Modern multi-tenant enterprise dashboard for cloud infrastructure monitoring, microservices observability, and automated alerting.",
     fullDesc: "An all-in-one cloud management dashboard designed for high-throughput DevOps teams. Features customizable telemetry widgets, real-time log streaming, and role-based access control.",
-    image: "/assets/hero-tech-visual.jpg",
+    image: getAssetUrl("/assets/omniverve-saas.jpg"),
     tags: ["Next.js", "TypeScript", "Node.js", "PostgreSQL", "Tailwind CSS", "Docker"],
     stats: { speed: "<85ms API Latency", metrics: "10k+ Events/sec", type: "Enterprise SaaS" },
     features: [
@@ -325,7 +327,7 @@ export const PROJECTS = [
     filterKey: "mobile",
     shortDesc: "Cross-platform iOS and Android telemedicine app with encrypted video consultations, smart pill reminders, and vital analytics.",
     fullDesc: "A patient-first healthcare companion built with Flutter. Provides instant appointment booking, HIPAA-compliant WebRTC video calls, digital prescriptions, and biometric lock security.",
-    image: "/assets/hero-tech-visual.jpg",
+    image: getAssetUrl("/assets/pulseflow-health.jpg"),
     tags: ["Flutter", "Dart", "Firebase", "WebRTC", "Node.js", "Stripe"],
     stats: { speed: "60 FPS Smooth", metrics: "4.9/5 Rating", type: "Mobile App" },
     features: [
@@ -345,7 +347,7 @@ export const PROJECTS = [
     filterKey: "websites",
     shortDesc: "Ultra-luxury modern e-commerce storefront with fluid 3D product visualizer, instant search, and headless Shopify backend.",
     fullDesc: "Crafted for a high-end luxury lifestyle brand, Aura combines editorial typography, smooth page transitions, and an instant frictionless checkout flow that increased conversion by 38%.",
-    image: "/assets/hero-tech-visual.jpg",
+    image: getAssetUrl("/assets/aura-luxury-commerce.jpg"),
     tags: ["Next.js 14", "React", "Tailwind CSS", "Stripe", "Framer Motion", "Shopify API"],
     stats: { speed: "100 Lighthouse", metrics: "38% Conv. Boost", type: "E-commerce" },
     features: [
@@ -365,7 +367,7 @@ export const PROJECTS = [
     filterKey: "ai",
     shortDesc: "Enterprise Retrieval-Augmented Generation platform connecting company PDF documentation, Notion, and Slack to an internal private LLM.",
     fullDesc: "Eliminates employee search time by indexing millions of internal enterprise documents. Features citation links back to exact page paragraphs, hybrid semantic search, and zero data leakage.",
-    image: "/assets/hero-tech-visual.jpg",
+    image: getAssetUrl("/assets/cognitiverag-engine.jpg"),
     tags: ["Python", "LangChain", "Pinecone", "OpenAI / Claude", "FastAPI", "React"],
     stats: { speed: "1.2s Response", metrics: "0% Data Leakage", type: "AI Knowledge" },
     features: [
@@ -385,7 +387,7 @@ export const PROJECTS = [
     filterKey: "mobile",
     shortDesc: "On-demand freight dispatch and real-time turn-by-turn routing app for fleet operators and field delivery drivers.",
     fullDesc: "Engineered for high-stress delivery operations, this mobile app works flawlessly offline, optimizes multi-stop routes with custom algorithms, and records proof-of-delivery signatures.",
-    image: "/assets/hero-tech-visual.jpg",
+    image: getAssetUrl("/assets/swiftlogistics-app.jpg"),
     tags: ["React Native", "TypeScript", "Mapbox", "Golang", "PostGIS", "WebSockets"],
     stats: { speed: "Offline Capable", metrics: "22% Fuel Saved", type: "Logistics Mobile" },
     features: [
@@ -405,7 +407,7 @@ export const PROJECTS = [
     filterKey: "websites",
     shortDesc: "Cinematic real estate portal featuring interactive 3D floor plans, mortgage calculators, and direct agent WhatsApp scheduling.",
     fullDesc: "Designed with an immersive dark theme, luxury typography, and interactive virtual walkthroughs that engage high-net-worth real estate buyers.",
-    image: "/assets/hero-tech-visual.jpg",
+    image: getAssetUrl("/assets/zenith-realestate.jpg"),
     tags: ["Next.js", "React", "Tailwind CSS", "Three.js", "Leaflet Maps"],
     stats: { speed: "99 Performance", metrics: "3.2x Lead Growth", type: "Real Estate Portal" },
     features: [
@@ -425,7 +427,7 @@ export const PROJECTS = [
     filterKey: "software",
     shortDesc: "Ultra-low-latency financial intelligence platform with real-time order book visualization, algorithmic backtesting, and market signals.",
     fullDesc: "Built for active traders and analysts, ApexFin processes thousands of market ticks per second using high-efficiency WebAssembly workers and customizable candle charts.",
-    image: "/assets/hero-tech-visual.jpg",
+    image: getAssetUrl("/assets/apexfin-terminal.jpg"),
     tags: ["React", "TypeScript", "WebSockets", "WebAssembly", "Tailwind CSS", "Node.js"],
     stats: { speed: "60 FPS Render", metrics: "Sub-10ms Stream", type: "FinTech Platform" },
     features: [
